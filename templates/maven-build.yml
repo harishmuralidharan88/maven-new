@@ -1,0 +1,12 @@
+parameters:
+  test: ''
+
+steps:
+  - ${{ if eq(parameters.test, false) }}:
+    - script: echo received input as FALSE
+    - script: echo MAVEN Test cases will not be executed
+    - script: mvn clean package -Dmaven.test.skip=true
+  - ${{ if eq(parameters.test, true) }}:
+    - script: echo received input as TRUE
+    - script: echo MAVEN Test cases Starts its execution
+    - script: mvn clean package

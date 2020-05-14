@@ -1,0 +1,10 @@
+pool:
+  name: 'harish'
+
+trigger:
+- none
+
+steps:
+- template: templates/maven-build.yml
+  parameters:
+    Test: false
