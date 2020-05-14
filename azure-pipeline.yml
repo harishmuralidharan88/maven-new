@@ -7,4 +7,4 @@ trigger:
 steps:
 - template: templates/maven-build.yml
   parameters:
-    Test: false
+    Test: true
